@@ -42,7 +42,7 @@
       color: #ffd700;
     }
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
       line-height: 1.6;
@@ -63,6 +63,45 @@
       font-size: 0.9em;
       color: #aaa;
     }
+
+    /* Hakkında sekmeleri */
+    .hakkinda-container {
+      display: flex;
+      gap: 20px;
+    }
+    .tab-list {
+      flex: 1;
+      max-width: 200px;
+    }
+    .tab-list button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: #2e0854;
+      color: #f5e6c4;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-weight: bold;
+    }
+    .tab-list button:hover {
+      background: #ffd700;
+      color: #000;
+    }
+    .tab-content {
+      flex: 3;
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 5px;
+      min-height: 200px;
+    }
+    .tab-pane {
+      display: none;
+    }
+    .tab-pane.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -80,8 +119,44 @@
   <main>
     <section id="hakkinda">
       <h2>Hakkında</h2>
-      <p>Bu site, havas ilmi ve hakikat yoluna dair kadim bilgileri paylaşmak amacıyla kurulmuştur. 
-      Ruhaniyet, mistisizm ve ezoterik öğretiler üzerine içerikler bulabilirsiniz.</p>
+      <div class="hakkinda-container">
+        <!-- Sol tarafta sekmeler -->
+        <div class="tab-list">
+          <button data-target="nazar">Nazar</button>
+          <button data-target="buyu">Büyü Bozma</button>
+          <button data-target="musallat">Musallat</button>
+          <button data-target="vesvese">Vesvese</button>
+          <button data-target="ask">Aşk-Bağlama</button>
+          <button data-target="geri">Geri Getirme</button>
+        </div>
+        <!-- Sağ tarafta içerik -->
+        <div class="tab-content">
+          <div id="nazar" class="tab-pane active">
+            <h3>Nazar</h3>
+            <p>Burada nazar ile ilgili açıklamalar yer alacak.</p>
+          </div>
+          <div id="buyu" class="tab-pane">
+            <h3>Büyü Bozma</h3>
+            <p>Burada büyü bozma ile ilgili açıklamalar yer alacak.</p>
+          </div>
+          <div id="musallat" class="tab-pane">
+            <h3>Musallat</h3>
+            <p>Burada musallat ile ilgili açıklamalar yer alacak.</p>
+          </div>
+          <div id="vesvese" class="tab-pane">
+            <h3>Vesvese</h3>
+            <p>Burada vesvese ile ilgili açıklamalar yer alacak.</p>
+          </div>
+          <div id="ask" class="tab-pane">
+            <h3>Aşk-Bağlama</h3>
+            <p>Burada aşk bağlama ile ilgili açıklamalar yer alacak.</p>
+          </div>
+          <div id="geri" class="tab-pane">
+            <h3>Geri Getirme</h3>
+            <p>Burada geri getirme ile ilgili açıklamalar yer alacak.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="makaleler">
@@ -113,9 +188,9 @@
       const sections = document.querySelectorAll("main section");
       const navLinks = document.querySelectorAll("nav a");
 
-      // Başlangıçta sadece ilk bölüm görünsün
+      // Başlangıçta sadece Hakkında görünsün
       sections.forEach((sec, i) => {
-        sec.style.display = i === 0 ? "block" : "none";
+        sec.style.display = sec.id === "hakkinda" ? "block" : "none";
       });
 
       // Menüye tıklanınca ilgili bölümü aç
@@ -126,6 +201,19 @@
 
           sections.forEach(sec => {
             sec.style.display = sec.id === targetId ? "block" : "none";
+          });
+        });
+      });
+
+      // Hakkında sekmeleri
+      const tabButtons = document.querySelectorAll(".tab-list button");
+      const tabPanes = document.querySelectorAll(".tab-pane");
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target");
+          tabPanes.forEach(pane => {
+            pane.classList.toggle("active", pane.id === target);
           });
         });
       });
