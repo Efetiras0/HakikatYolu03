@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Hakikat Yolu - Havas İlmi</title>
-  <meta name="description" content="Hakikat Yolu ve Havas İlmi üzerine kadim bilgiler, makaleler ve ruhani içerikler.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
@@ -16,58 +15,42 @@
     }
     header {
       background: linear-gradient(90deg, #2e0854, #000000);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       text-align: center;
-      padding: 30px 20px;
+    }
+    header img {
+      height: 80px;
+      margin-right: 20px;
     }
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.2em;
       color: #ffd700;
     }
     header p {
       margin: 5px 0 0;
       font-size: 1.2em;
-    }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
       color: #f5e6c4;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    nav a:hover {
-      color: #ffd700;
     }
     main {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
-    }
-    section {
-      margin-bottom: 40px;
-      display: none; /* Başlangıçta gizli */
     }
     h2 {
       color: #ffd700;
       border-bottom: 1px solid #ffd700;
       padding-bottom: 5px;
     }
-    footer {
-      background: #000000;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #aaa;
-    }
-
-    /* Hakkında sekmeleri */
-    .hakkinda-container {
+    /* Kaynaklar sekmeleri */
+    .kaynaklar-container {
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
     .tab-list {
       flex: 1;
@@ -102,24 +85,67 @@
     .tab-pane.active {
       display: block;
     }
+    /* İletişim butonları */
+    .contact-links {
+      margin-top: 20px;
+    }
+    .contact-links a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px 15px;
+      background: #ffd700;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .contact-links a:hover {
+      background: #f5e6c4;
+    }
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    /* Mobil uyum */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header img {
+        margin: 0 0 10px 0;
+      }
+      .kaynaklar-container {
+        flex-direction: column;
+      }
+      .tab-list {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tab-list button {
+        flex: 1 1 45%;
+        margin: 5px;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Hakikat Yolu</h1>
-    <p>Havas İlmi ve Kadim Sırlar</p>
-    <nav>
-      <a href="#hakkinda">Hakkında</a>
-      <a href="#makaleler">Makaleler</a>
-      <a href="#kaynaklar">Kaynaklar</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
+    <img src="logo.jpeg" alt="Hakikat Yolu Logo">
+    <div>
+      <h1>Havas İlmi</h1>
+      <p>Sirran Hoca</p>
+    </div>
   </header>
 
   <main>
-    <section id="hakkinda">
-      <h2>Hakkında</h2>
-      <div class="hakkinda-container">
+    <section id="kaynaklar">
+      <h2>Kaynaklar</h2>
+      <div class="kaynaklar-container">
         <!-- Sol tarafta sekmeler -->
         <div class="tab-list">
           <button data-target="nazar">Nazar</button>
@@ -132,99 +158,55 @@
         <!-- Sağ tarafta içerik -->
         <div class="tab-content">
           <div id="nazar" class="tab-pane active">
-  <h3>Nazar</h3>
-  <p>Nazar, insanların bakışlarıyla ortaya çıkan olumsuz enerjilerin bir kişiye veya eşyaya zarar vermesi olarak bilinir. 
-  Kadim öğretilerde nazardan korunmak için dualar, semboller ve manevi uygulamalar kullanılır.</p>
-</div>
+            <h3>Nazar</h3>
+            <p>Sirran Hoca, nazarın olumsuz etkilerini gidermek için manevi destek ve uygulamalar sunar.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div>
+          </div>
           <div id="buyu" class="tab-pane">
-  <h3>Büyü Bozma</h3>
-  <p>Büyü bozma, kötü niyetle yapılan manevi müdahalelerin etkisini ortadan kaldırma yöntemidir. 
-  Bu süreçte dualar, ritüeller ve temizlenme uygulamaları öne çıkar.</p>
-</div>
+            <h3>Büyü Bozma</h3>
+            <p>Sirran Hoca, kötü niyetle yapılan büyülerin etkisini ortadan kaldırmak için manevi çözümler üretir.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div>
+          </div>
           <div id="musallat" class="tab-pane">
-  <h3>Musallat</h3>
-  <p>Musallat, ruhani varlıkların bir kişiye veya mekâna sürekli rahatsızlık vermesi durumudur. 
-  Çözüm için manevi koruma, zikirler ve özel dualar uygulanır.</p>
-</div>
+            <h3>Musallat</h3>
+            <p>Sirran Hoca, musallat durumlarında manevi koruma ve özel dualarla destek sağlar.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div>
+          </div>
           <div id="vesvese" class="tab-pane">
-  <h3>Vesvese</h3>
-  <p>Vesvese, kişinin zihnine sürekli şüphe ve korku düşüncelerinin gelmesi halidir. 
-  Ruhani öğretilerde vesveseden korunmak için zikir, sabır ve bilinç farkındalığı önerilir.</p>
-</div>
+            <h3>Vesvese</h3>
+            <p>Sirran Hoca, vesveseden kurtulmak için zikir ve bilinç farkındalığı yöntemleri uygular.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div>
+          </div>
           <div id="ask" class="tab-pane">
-  <h3>Aşk-Bağlama</h3>
-  <p>Aşk bağlama, iki kişi arasında manevi bağ kurma niyetiyle yapılan uygulamalardır. 
-  Kadim öğretilerde bu tür uygulamalar dikkatle ve sorumluluk bilinciyle ele alınır.</p>
-</div>
+            <h3>Aşk-Bağlama</h3>
+            <p>Sirran Hoca, aşk bağlama konusunda manevi yöntemlerle destek sunar.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div>
+          </div>
           <div id="geri" class="tab-pane">
-  <h3>Geri Getirme</h3>
-  <p>Geri getirme, kaybolan bir eşyanın veya uzaklaşan bir kişinin yeniden dönmesi için yapılan manevi niyetlerdir. 
-  Bu süreçte sabır, dua ve içsel yönelim önemlidir.</p>
-</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="makaleler">
-      <h2>Makaleler</h2>
-      <ul>
-        <li><strong>İlm-i Havas:</strong> Gizli ilimlerin kapısı</li>
-        <li><strong>Hakikat Yolu:</strong> Manevi yolculuk üzerine notlar</li>
-        <li><strong>Esrarname:</strong> Kadim sırların defteri</li>
-      </ul>
-    </section>
-
-    <section id="kaynaklar">
-      <h2>Kaynaklar</h2>
-      <p>Burada havas ilmi ve tasavvuf üzerine kitap önerileri, PDF bağlantıları ve referanslar yer alacak.</p>
-    </section>
-
-    <section id="iletisim">
-      <h2>İletişim</h2>
-      <p>Bizimle iletişime geçmek için: <a href="mailto:hakikatyolu@example.com">hakikatyolu@example.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 Hakikat Yolu - Havas İlmi</p>
-  </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const sections = document.querySelectorAll("main section");
-      const navLinks = document.querySelectorAll("nav a");
-
-      // Başlangıçta sadece Hakkında görünsün
-      sections.forEach((sec, i) => {
-        sec.style.display = sec.id === "hakkinda" ? "block" : "none";
-      });
-
-      // Menüye tıklanınca ilgili bölümü aç
-      navLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute("href").substring(1);
-
-          sections.forEach(sec => {
-            sec.style.display = sec.id === targetId ? "block" : "none";
-          });
-        });
-      });
-
-      // Hakkında sekmeleri
-      const tabButtons = document.querySelectorAll(".tab-list button");
-      const tabPanes = document.querySelectorAll(".tab-pane");
-
-      tabButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-          const target = btn.getAttribute("data-target");
-          tabPanes.forEach(pane => {
-            pane.classList.toggle("active", pane.id === target);
-          });
-        });
-      });
-    });
-  </script>
-</body>
-</html>
-
+            <h3>Geri Getirme</h3>
+            <p>Sirran Hoca, kaybolan veya uzaklaşan kişilerin geri dönmesi için manevi destek sağlar.</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank">TikTok</a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank">Instagram</a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank">WhatsApp</a>
+            </div
