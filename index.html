@@ -166,8 +166,7 @@
               <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
               <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
-          </div>
-          <div id="buyu" class="tab-pane">
+          </div>          <div id="buyu" class="tab-pane">
             <h3>Büyü Bozma</h3>
             <p>Sirran Hoca, kötü niyetle yapılan büyülerin etkisini ortadan kaldırmak için manevi çözümler üretir.</p>
             <p>Daha fazla bilgi için iletişime geç:</p>
@@ -202,4 +201,44 @@
             <p>Sirran Hoca, aşk bağlama konusunda manevi yöntemlerle destek sunar.</p>
             <p>Daha fazla bilgi için iletişime geç:</p>
             <div class="contact-links">
-              <a href="https://www.tiktok.com/@sirranhoca" target="_
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div id="geri" class="tab-pane">
+            <h3>Geri Getirme</h3>
+            <p>Sirran Hoca, kaybolan veya uzaklaşan kişilerin geri dönmesi için manevi destek sağlar.</p>
+            <p>Daha fazla bilgi için iletişime geç:</p>
+            <div class="contact-links">
+              <a href="https://www.tiktok.com/@sirranhoca" target="_blank"><i class="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/sirranhoca" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/905XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Hakikat Yolu - Havas İlmi | Sirran Hoca</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const tabButtons = document.querySelectorAll(".tab-list button");
+      const tabPanes = document.querySelectorAll(".tab-pane");
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target");
+          tabPanes.forEach(pane => {
+            pane.classList.toggle("active", pane.id === target);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
